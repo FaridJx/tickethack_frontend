@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0
+}
+#main {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12,1fr);
+
+
+}
+
+#header {
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 0.5vh;
+        padding: 25px 30px 25px 30px;
+        background-color: white;
+        text-decoration: none;
+    }
+    
+ 
+
+
+#header-contain {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 0.5vh;
+        padding: 25px 30px 25px 30px;
+        background-color: white;
+        text-decoration: none;
+        color: black;
+    
+}
+#buttons{
+    justify-content: space-around ;
+}
+#container {
+
+}
+
+#Txt { 
+
+}
+
+#Search {
+
+}
+
+#Result {
+
+}
+
+#book-result {
+
+}
+#bokk-footer{
+
+}
+#bulle {
+
+}
+#cart-result{
+
+}
+
+#cart-footer{
+
+}
