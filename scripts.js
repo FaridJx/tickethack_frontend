@@ -25,15 +25,7 @@ fetch('', {
             <img id="train" src="images/train.png" />
             <p class="message">No Trip Found</p>`
             
-
-
-
             }
-
-
-
-
-
-
     
+})
 })
