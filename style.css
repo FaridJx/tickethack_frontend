@@ -46,7 +46,7 @@ a{
     grid-row-end: 13;
     grid-column-start: 1;
     grid-column-end: 13;
-    background-image: url(/images/background.jpg);
+    background-image: url(./images/background.jpg);
     background-size: cover;
     display: flex;
     justify-content: flex-start;
