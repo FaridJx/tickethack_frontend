@@ -2,7 +2,7 @@ document.querySelector('#btn-search').addEventListener('click', () => {
 	const tripDepart = document.querySelector('#depart').value;
     const tripArrivee = document.querySelector('#arrivée').value;
 
-fetch('', {
+fetch('http://localhost:3000/trips/selec', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify({ tripDepart , tripArrivee }),
@@ -20,12 +20,13 @@ fetch('', {
 			</div>
 			`;
 			}}
-            else {document.querySelector('#result').innerHTML =`
+            else {
+         document.querySelector('#result').innerHTML =`
             <div class="notfound">
             <img id="train" src="images/train.png" />
             <p class="message">No Trip Found</p>`
-            
-            }
+        
+        }
     
 })
 })
