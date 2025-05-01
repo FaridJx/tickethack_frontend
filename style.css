@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0
 }
+
 #main {
     height: 100vh;
     width: 100vw;
@@ -37,10 +38,6 @@ a{
 }
 
 
-/* #container{
-    width: 100vw;
-} */
-
 #main-container{
     grid-row-start: 2;
     grid-row-end: 13;
@@ -51,7 +48,6 @@ a{
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    background-color: #a7f50b;
     /* border: 1px solid black; */
     align-items: center;
 }
@@ -62,43 +58,48 @@ a{
     color: #ffffff;
 }
 
-#recherche{
+#search{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     /* height: 150px; */
-    width: 100vw;
+    width: 70%;
 }
 
 .div-cont{
-    /* grid-row-start: 2;
-    grid-row-end: 12; */
-    /* grid-column-start: 1;
-    grid-column-end: 5; */
     display: flex;
     flex-direction: column;
-    height: 350px;
+    height: 320px;
     width: 300px;
     padding: 20px;
-    /* border: 1px solid black; */
     border-radius: 10px;
     background-color: #ffffff;
     justify-content: space-between;
-    margin: 0 70px;
 }
 
-.champ{
+/* ---------------------------- LEFT DIV ------------------------- */
+
+
+#srch-trips{
+    width: 100%;
+}
+.input{
     height: 40px;
     width: 100%;
     /* padding-left: 10px; */
+    /* padding: 2px; */
     border-radius: 5px;
     border: none;
     background-color: #e8e8e8;
-    border-bottom: 1px solid rgb(93, 93, 93);
+    /* border-bottom: 1px solid rgb(93, 93, 93); */
 }
 
-.trip{
-    display: flex;
-    justify-content: space-around;
+#depart{
+    border-bottom: 1px solid rgb(93, 93, 93);
+
+}
+
+.input:hover{
+    cursor: pointer;
 }
 
 #date{
@@ -106,51 +107,43 @@ a{
 }
 
 
-#result {
-    /* grid-row-start: 2;
-    grid-row-end: 12;
-    grid-column-start: 5;
-    grid-column-end: 13; */
-    border: 1px solid black;
-    /* background-color: #0f7dea; */
-  }
-
 #btn-search{
     background-color: #047e30;
     color: #ffffff;
 }
 
 
+/* ------------------ RIGHT DIV ---------------- */
 
-#container {
+#result {
+    border: 1px solid black;
+    overflow-y: scroll;
+  }
 
+
+.trip{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e8e8e8;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 6px;
 }
 
-#Txt { 
-
+.dep-arr{
+    display: flex;
 }
 
-#Search {
-
+.space{
+    margin: 0 8px;
 }
 
-#Result {
-
-}
-
-#book-result {
-
-}
-#bokk-footer{
-
-}
-#bulle {
-
-}
-#cart-result{
-
-}
-
-#cart-footer{
-
+.book{
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #06a541;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
