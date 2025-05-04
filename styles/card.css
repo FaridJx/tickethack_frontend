@@ -99,6 +99,25 @@ div{
     padding: 15px 60px;
 }
 
+
+.space{
+    margin: 0 8px;
+}
+
 .delete{
-    
+    background-color: #4fab92;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#btnPurchase{
+    background-color: #4fab92;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
 }

@@ -84,7 +84,8 @@ document.querySelector('#btn-search').addEventListener('click', () => {
                             price: price
                         })
                     }).then(response => response.json())
-                    .then(data => console.log(data)
+                    .then(data => console.log(data),
+                    window.location.href = "./cart.html"
                 )
             }
         )

@@ -14,7 +14,7 @@ fetch('http://localhost:3000/cart')
         <div id="total">
         <div id="totalDiv">
         <p id="sum"></p>
-        <button>Purchase</button>
+        <button id="btnPurchase">Purchase</button>
         </div>
         </div>
         `
