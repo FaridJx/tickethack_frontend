@@ -1,3 +1,5 @@
+let carts
+
 document.querySelector('#btn-search').addEventListener('click', () => {
     const tripDepart = document.querySelector('#depart').value;
     const tripArrivee = document.querySelector('#arrivee').value;
@@ -31,7 +33,6 @@ document.querySelector('#btn-search').addEventListener('click', () => {
 
             data.data.forEach(trip => {
                 let dates = new Date(trip.date)
-                console.log(typeof dates)
                 let hours = dates.getHours()
                 let minutes = dates.getMinutes()
                 if(minutes < 10){
@@ -48,17 +49,57 @@ document.querySelector('#btn-search').addEventListener('click', () => {
                         <p class="arrivée">${trip.arrival}</p>
                         </div>
                         <p class="price">${trip.price}€</p>
-                        <p class="date">${hours}:${minutes}</p>
-                        <button class="book" id="btn-book">BOOK</button>
+                        <p class="hours">${hours}:${minutes}</p>
+                        <button class="book" 
+                                id="btn-book"
+                                data-depart="${trip.departure}"
+                                data-arrivee="${trip.arrival}"
+                                data-price="${trip.price}"
+                                data-date="${dates}"
+                                data-hours="${hours}:${minutes}">
+                                    BOOK
+                        </button>
                     </div>
                 `;
             });
+            carts = document.querySelectorAll('.book')
+            carts?.forEach(e => {
+                e.addEventListener('click', () => {
+                    const depart = e.dataset.depart
+                    const arrivee = e.dataset.arrivee
+                    const date = e.dataset.date
+                    const price = Number(e.dataset.price)
+                    const hours = e.dataset.hours
+                    
+                    
+                    fetch('http://localhost:3000/cart/new', {
+                        headers: {
+                            "Content-Type" : "application/json"
+                        },
+                        method: 'POST',
+                        body: JSON.stringify({
+                            departure: depart,
+                            arrival: arrivee,
+                            date: date,
+                            price: price
+                        })
+                    }).then(response => response.json())
+                    .then(data => console.log(data)
+                )
+            }
+        )
+        })
         } else{
             resultElement.innerHTML = '';
             resultElement.innerHTML += `
-                <img id="loupe" src="/images/notfound.png">
-                <p>Ce trajet n'est pas disponible</p>
+                <div id="resultContain">
+                    <img id="loupe" src="/images/notfound.png" height="140" width="140">
+                    <hr>
+                    <p>Ce trajet n'est pas disponible</p>
+                </div>
             `;
         }
     })
 })
+
+
