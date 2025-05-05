@@ -58,7 +58,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 20px 0 0 0;
+    /* padding: 20px 0 0 0; */
 }
 
 div{
@@ -79,6 +79,10 @@ div{
     margin: 20px 0;
     padding: 10px;
     
+}
+
+.noTicketMsg{
+    margin: 10px 0;
 }
 
 .dep-arr{

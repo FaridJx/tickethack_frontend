@@ -19,7 +19,7 @@ fetch('http://localhost:3000/cart')
         </div>
         `
         let cartsList = document.querySelector('#cartsList')
-        let cum = 0 
+        let cum = 0
         data.forEach(cart => {
             cum += cart.price
             let dates = new Date(cart.date)
@@ -73,11 +73,18 @@ fetch('http://localhost:3000/cart')
                 cum -= price
                 e.parentNode.remove()
                 document.querySelector('#sum').textContent = `Total: ${cum}€`
-
+                if(cum === 0) {
+                    // cartsContain.innerHTML = ''
+                    cartsContain.innerHTML = `
+                        <p class="noTicketMsg">No ticket in your cart.</p>
+                        <p class="noTicketMsg">Why not plan a trip ?</p>
+                    `
+                }
             })
         })
     });
-    }
+   
+}
 })
 
 
