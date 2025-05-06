@@ -74,7 +74,6 @@ fetch('http://localhost:3000/cart')
                 e.parentNode.remove()
                 document.querySelector('#sum').textContent = `Total: ${cum}€`
                 if(cum === 0) {
-                    // cartsContain.innerHTML = ''
                     cartsContain.innerHTML = `
                         <p class="noTicketMsg">No ticket in your cart.</p>
                         <p class="noTicketMsg">Why not plan a trip ?</p>
@@ -82,9 +81,8 @@ fetch('http://localhost:3000/cart')
                 }
             })
         })
-    });
-   
-}
+    });    
+    }
 })
 
 
