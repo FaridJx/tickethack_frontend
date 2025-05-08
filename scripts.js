@@ -30,7 +30,7 @@ document.querySelector('#btn-search').addEventListener('click', () => {
 
         if (data.data?.length) {
             resultElement.innerHTML = ''; // Efface le contenu précédent
-
+            data.data.sort()
             data.data.forEach(trip => {
                 let dates = new Date(trip.date)
                 let hours = dates.getHours()
