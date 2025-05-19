@@ -58,6 +58,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    padding-top: 25px;
     /* padding: 20px 0 0 0; */
 }
 
@@ -71,7 +72,7 @@ div{
 
 .cart{
     display: flex;
-    background-color: #cdcdcd;
+    background-color: #f1f1f1;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -124,4 +125,27 @@ div{
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+#end{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+hr {
+    width: 80%;
+    border-top: 1px solid #000;
+}
+
+#msgEnd{
+    margin: 20px 0;
+    color: #4fab92;
 }

@@ -10,11 +10,9 @@ fetch("http://localhost:3000/booking")
         <h3>My Travels</h3>
         </div>
         <div id="cartsList"></div>
-        <div id="total">
-        <div id="totalDiv">
-        <p id="sum"></p>
-        <button id="btnPurchase">Purchase</button>
-        </div>
+        <div id="footer">
+        <hr />
+        <p id="msgEnd">Enjoy your travel with TicketHack</p>
         </div>
         `;
       let cartsList = document.querySelector("#cartsList");
