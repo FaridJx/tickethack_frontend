@@ -11,12 +11,12 @@ fetch("http://localhost:3000/cart")
         <h3>My cart</h3>
         </div>
         <div id="cartsList"></div>
-        <div id="total">
+        <footer id="total">
         <div id="totalDiv">
         <p id="sum"></p>
         <button id="btnPurchase">Purchase</button>
         </div>
-        </div>
+        </footer>
         `;
       let cartsList = document.querySelector("#cartsList");
       let cum = 0;

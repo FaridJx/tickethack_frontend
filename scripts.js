@@ -84,8 +84,12 @@ document.querySelector('#btn-search').addEventListener('click', () => {
                             price: price
                         })
                     }).then(response => response.json())
-                    .then(data => console.log(data),
-                    window.location.href = "./cart.html"
+                    .then(data => { 
+                        if(!data.result){
+                        document.querySelector('#msgError').textContent = `${data.error}`
+                    } else {
+                        window.location.href = "./cart.html"
+                    }}
                 )
             }
         )
